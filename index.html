@@ -22,7 +22,11 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+  }
 
   body {
     background: var(--washi);
@@ -30,6 +34,8 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   /* Progress Bar */
@@ -810,16 +816,16 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-item-main">✈ 出發，飛往高松</div>
+        <div class="timeline-item-main">✈ 桃園機場出發 14:30</div>
         <div class="timeline-item-sub">辦理登機手續，請提前抵達機場</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-item-main">抵達高松機場</div>
-        <div class="timeline-item-sub">入境日本，集合後前往飯店</div>
+        <div class="timeline-item-main">抵達四國高松機場 18:05</div>
+        <div class="timeline-item-sub">入境日本，集合後前往飯店入住</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-item-main">入住飯店，自由晚餐</div>
-        <div class="timeline-item-sub">可於飯店周邊探索當地美食</div>
+        <div class="timeline-item-main">晚餐：機上套餐</div>
+        <div class="timeline-item-sub">抵達後自由活動，感受高松夜晚氛圍</div>
       </div>
     </div>
 
@@ -828,25 +834,25 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 自理｜午餐 機上｜晚餐 自理</div>
+          <div class="info-value">早餐 自理｜午餐 自理｜晚餐 機上套餐</div>
         </div>
       </div>
       <div class="info-row">
         <span class="info-icon">🏨</span>
         <div class="info-content">
           <div class="info-label">住宿</div>
-          <div class="info-value">高松市區飯店</div>
+          <div class="info-value">高松大和ROYNET酒店</div>
           <button class="hotel-expand-btn" onclick="toggleHotel(this)">
             查看房型詳情 <span>＋</span>
           </button>
           <div class="hotel-detail">
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">飯店</span>
-              <span>高松市區精選旅館</span>
+              <span>ダイワロイネットホテル高松</span>
             </div>
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">房型</span>
-              <span>標準雙人房（依報名人數分配）</span>
+              <span>兩小床房 28平米</span>
             </div>
           </div>
         </div>
@@ -889,21 +895,25 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 飯店｜午餐 當地料理｜晚餐 道後溫泉鯛魚會席</div>
+          <div class="info-value">早餐 飯店｜午餐 瀨戶內海鮮御膳｜晚餐 飯店內豪華自助餐</div>
         </div>
       </div>
       <div class="info-row">
         <span class="info-icon">🏨</span>
         <div class="info-content">
           <div class="info-label">住宿</div>
-          <div class="info-value">道後溫泉旅館（松山市）</div>
+          <div class="info-value">大江戶溫泉物語 道後酒店</div>
           <button class="hotel-expand-btn" onclick="toggleHotel(this)">
             查看房型詳情 <span>＋</span>
           </button>
           <div class="hotel-detail">
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">飯店</span>
-              <span>道後溫泉區精選旅館</span>
+              <span>大江戸温泉物語 道後</span>
+            </div>
+            <div class="hotel-detail-row">
+              <span class="hotel-detail-label">房型</span>
+              <span>兩小床房 26.4平米</span>
             </div>
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">特色</span>
@@ -972,21 +982,25 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 旅館｜午餐 松山市區｜晚餐 四萬十川鰻魚料理</div>
+          <div class="info-value">早餐 飯店｜午餐 愛媛鄉土料理｜晚餐 飯店內豪華自助餐</div>
         </div>
       </div>
       <div class="info-row">
         <span class="info-icon">🏨</span>
         <div class="info-content">
           <div class="info-label">住宿</div>
-          <div class="info-value">四萬十川沿岸旅館</div>
+          <div class="info-value">土佐溫泉 MERCURE酒店</div>
           <button class="hotel-expand-btn" onclick="toggleHotel(this)">
             查看房型詳情 <span>＋</span>
           </button>
           <div class="hotel-detail">
             <div class="hotel-detail-row">
-              <span class="hotel-detail-label">特色</span>
-              <span>緊鄰四萬十川，可享清流景緻</span>
+              <span class="hotel-detail-label">飯店</span>
+              <span>メルキュール高知土佐リゾート＆スパ</span>
+            </div>
+            <div class="hotel-detail-row">
+              <span class="hotel-detail-label">房型</span>
+              <span>和洋室 36平米</span>
             </div>
           </div>
         </div>
@@ -1029,21 +1043,25 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 旅館｜午餐 大步危當地｜晚餐 高松烏龍麵</div>
+          <div class="info-value">早餐 飯店｜午餐 大步危香魚料理｜晚餐 飯店內溫泉會席料理</div>
         </div>
       </div>
       <div class="info-row">
         <span class="info-icon">🏨</span>
         <div class="info-content">
           <div class="info-label">住宿</div>
-          <div class="info-value">高松市區飯店</div>
+          <div class="info-value">琴平溫泉 琴參閣酒店</div>
           <button class="hotel-expand-btn" onclick="toggleHotel(this)">
             查看房型詳情 <span>＋</span>
           </button>
           <div class="hotel-detail">
             <div class="hotel-detail-row">
-              <span class="hotel-detail-label">位置</span>
-              <span>高松市區，鄰近栗林公園與購物街</span>
+              <span class="hotel-detail-label">飯店</span>
+              <span>琴平溫泉 琴參閣</span>
+            </div>
+            <div class="hotel-detail-row">
+              <span class="hotel-detail-label">房型</span>
+              <span>兩小床房 32平米</span>
             </div>
           </div>
         </div>
@@ -1094,12 +1112,12 @@
         <div class="timeline-item-sub">日本最美大名庭園之一，松樹倒映水面，如畫入境</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-item-main">市區自由購物</div>
-        <div class="timeline-item-sub">高松商店街、特產購入，帶走四國的最後滋味</div>
+        <div class="timeline-item-main">高松市區逛街購物</div>
+        <div class="timeline-item-sub">商店街特產購入，帶走四國的最後滋味</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-item-main">✈ 啟程返台</div>
-        <div class="timeline-item-sub">於高松機場辦理登機，帶著滿滿回憶踏上歸途</div>
+        <div class="timeline-item-main">✈ 四國高松機場出發 19:05</div>
+        <div class="timeline-item-sub">抵達桃園機場 20:55，帶著滿滿回憶踏上歸途</div>
       </div>
     </div>
 
@@ -1108,14 +1126,14 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 飯店｜午餐 自理｜晚餐 機上</div>
+          <div class="info-value">早餐 飯店｜午餐 香川烏龍麵料理｜晚餐 機上套餐</div>
         </div>
       </div>
       <div class="info-row">
         <span class="info-icon">✈</span>
         <div class="info-content">
-          <div class="info-label">返程</div>
-          <div class="info-value">高松機場出發，抵達台灣</div>
+          <div class="info-label">返程航班</div>
+          <div class="info-value">高松 19:05 → 桃園 20:55</div>
         </div>
       </div>
     </div>
