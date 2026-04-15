@@ -119,9 +119,21 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 30% 40%, rgba(86,107,68,0.35) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 70%, rgba(141,110,99,0.25) 0%, transparent 50%),
-      linear-gradient(160deg, #0d1a08 0%, #1e2d15 40%, #2a1f1a 100%);
+      linear-gradient(to bottom,
+        rgba(13,26,8,0.45) 0%,
+        rgba(13,26,8,0.25) 30%,
+        rgba(13,26,8,0.55) 70%,
+        rgba(13,26,8,0.85) 100%);
+    z-index: 1;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://drive.google.com/thumbnail?id=1mZF1WSt4B1Uz5JGNFd7dOmt7B80uxSR-&sz=w1366');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
   }
 
   /* Decorative wave pattern */
@@ -146,12 +158,13 @@
     right: 24px;
     font-family: 'Shippori Mincho', serif;
     font-size: 72px;
-    color: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.06);
     writing-mode: vertical-rl;
     letter-spacing: 0.2em;
     line-height: 1;
     pointer-events: none;
     animation: fadeIn 2s ease forwards;
+    z-index: 2;
   }
 
   .hero-content {
@@ -759,6 +772,7 @@
 
 <!-- Hero -->
 <section class="hero" id="top">
+  <div class="hero-bg-img"></div>
   <div class="hero-bg"></div>
   <div class="hero-wave"></div>
   <div class="hero-kanji">四國溫泉</div>
@@ -895,25 +909,25 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 飯店｜午餐 瀨戶內海鮮御膳｜晚餐 飯店內豪華自助餐</div>
+          <div class="info-value">早餐 飯店｜午餐 瀨戶內海鮮御膳｜晚餐 伊予牛會席料理</div>
         </div>
       </div>
       <div class="info-row">
         <span class="info-icon">🏨</span>
         <div class="info-content">
           <div class="info-label">住宿</div>
-          <div class="info-value">大江戶溫泉物語 道後酒店</div>
+          <div class="info-value">道後溫泉 葛城酒店</div>
           <button class="hotel-expand-btn" onclick="toggleHotel(this)">
             查看房型詳情 <span>＋</span>
           </button>
           <div class="hotel-detail">
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">飯店</span>
-              <span>大江戸温泉物語 道後</span>
+              <span>ホテル葛城</span>
             </div>
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">房型</span>
-              <span>兩小床房 26.4平米</span>
+              <span>和洋室兩小床房 8疊 約26平米</span>
             </div>
             <div class="hotel-detail-row">
               <span class="hotel-detail-label">特色</span>
@@ -972,8 +986,12 @@
         <div class="timeline-item-sub">被譽為明治時代數寄屋建築傑作，庭園極美</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-item-main">四萬十川</div>
+        <div class="timeline-item-main">四萬十川．沉下橋</div>
         <div class="timeline-item-sub">日本最後の清流，沿途欣賞沉下橋與自然美景</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item-main">弘人市場品嘗美食</div>
+        <div class="timeline-item-sub">高知縣最大廚房，現撈海鮮直送餐桌</div>
       </div>
     </div>
 
@@ -982,7 +1000,7 @@
         <span class="info-icon">🍴</span>
         <div class="info-content">
           <div class="info-label">餐食</div>
-          <div class="info-value">早餐 飯店｜午餐 愛媛鄉土料理｜晚餐 飯店內豪華自助餐</div>
+          <div class="info-value">早餐 飯店｜午餐 愛媛鄉土料理｜晚餐 弘人市場海鮮料理</div>
         </div>
       </div>
       <div class="info-row">
@@ -1139,6 +1157,65 @@
     </div>
   </div>
 
+</div>
+
+<!-- Pricing Section -->
+<div style="background:var(--matcha);padding:56px 28px;">
+  <div style="max-width:700px;margin:0 auto;">
+
+    <div style="text-align:center;margin-bottom:36px;">
+      <div style="display:inline-block;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:10px;letter-spacing:0.3em;padding:5px 14px;border-radius:2px;margin-bottom:16px;">PRICING</div>
+      <h2 style="font-family:'Shippori Mincho',serif;font-size:26px;color:#fff;letter-spacing:0.1em;">報價費用</h2>
+    </div>
+
+    <!-- Main price cards -->
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;">
+      <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:24px;text-align:center;">
+        <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.6);margin-bottom:8px;">經濟艙</div>
+        <div style="font-family:'Shippori Mincho',serif;font-size:36px;color:#fff;font-weight:600;line-height:1;">81,900</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.7);margin-top:4px;">NT$ / 人</div>
+      </div>
+      <div style="flex:1;min-width:200px;background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.5);border-radius:6px;padding:24px;text-align:center;">
+        <div style="font-size:11px;letter-spacing:0.2em;color:var(--gold-light);margin-bottom:8px;">商務艙（補差額 +17,000）</div>
+        <div style="font-family:'Shippori Mincho',serif;font-size:36px;color:#fff;font-weight:600;line-height:1;">98,900</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.7);margin-top:4px;">NT$ / 人</div>
+      </div>
+    </div>
+
+    <!-- 包含 / 不包含 -->
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;background:rgba(0,0,0,0.15);border-radius:6px;padding:20px;">
+        <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.5);margin-bottom:14px;">★ 費用包含</div>
+        <div style="font-size:13.5px;color:rgba(255,255,255,0.85);line-height:2;">
+          行程所標示景點門票<br>
+          全程餐食<br>
+          四晚飯店住宿<br>
+          全程專屬巴士<br>
+          來回經濟艙機票<br>
+          兩地機場稅金<br>
+          團體責任險<br>
+          個人旅平險（含不便險）<br>
+          全程司機小費
+        </div>
+      </div>
+      <div style="flex:1;min-width:220px;background:rgba(0,0,0,0.15);border-radius:6px;padding:20px;">
+        <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.5);margin-bottom:14px;">✕ 費用不包含</div>
+        <div style="font-size:13.5px;color:rgba(255,255,255,0.85);line-height:2;">
+          護照申辦費用<br>
+          個人私費消費<br>
+          行李超重費用
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:rgba(255,255,255,0.55);line-height:1.8;">
+          ⚠ 個人機票為浮動報價，<br>敬請盡快決定。若機票價格調整，<br>本公司將重新報價，謝謝。
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);letter-spacing:0.05em;line-height:1.8;">
+      台灣自行搭機，司機兼任領隊於日本高松機場迎賓
+    </div>
+
+  </div>
 </div>
 
 <!-- Footer -->
